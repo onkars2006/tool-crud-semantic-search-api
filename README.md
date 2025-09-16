@@ -173,6 +173,30 @@ curl -X POST "http://localhost:8000/api/v1/tools" \
 curl "http://localhost:8000/api/v1/tools"
 ```
 
+**Get Specific Tool**
+
+```bash
+curl "http://localhost:8000/api/v1/tools/1"
+```
+
+**Update Tool**
+
+```bash
+curl -X PUT "http://localhost:8000/api/v1/tools/1" \
+-H "Content-Type: application/json" \
+-d '{
+  "name": "Pandas Library",
+  "description": "Enhanced Python data analysis library",
+  "tags": ["data-analysis", "python", "data-science", "updated"],
+  "tool_metadata": {"category": "data-analysis", "version": "2.0"}
+}'
+```
+**Delete a Tool**
+
+```bash
+curl -X DELETE "http://localhost:8000/api/v1/tools/1"
+```
+
 **Semantic Search**
 
 ```bash
@@ -185,6 +209,12 @@ curl -X POST "http://localhost:8000/api/v1/search" \
 
 ```bash
 curl "http://localhost:8000/api/v1/search/history"
+```
+
+**Health Check**
+
+```bash
+curl "http://localhost:8000/api/v1/health"
 ```
 
 ---
