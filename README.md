@@ -157,14 +157,7 @@ App available at: [http://localhost:8000](http://localhost:8000)
 **Create a Tool**
 
 ```bash
-curl -X POST "http://localhost:8000/api/v1/tools" \
--H "Content-Type: application/json" \
--d '{
-  "name": "Pandas",
-  "description": "Python data analysis library",
-  "tags": ["data-analysis", "python", "data-science"],
-  "tool_metadata": {"category": "data-analysis"}
-}'
+curl -X POST "http://localhost:8000/api/v1/tools" -H "Content-Type: application/json" -d "{\"name\": \"Pandas\", \"description\": \"Python data analysis library\", \"tags\": [\"data-analysis\", \"python\", \"data-science\"], \"tool_metadata\": {\"category\": \"data-analysis\"}}"
 ```
 
 **Get All Tools**
@@ -182,14 +175,7 @@ curl "http://localhost:8000/api/v1/tools/1"
 **Update Tool**
 
 ```bash
-curl -X PUT "http://localhost:8000/api/v1/tools/1" \
--H "Content-Type: application/json" \
--d '{
-  "name": "Pandas Library",
-  "description": "Enhanced Python data analysis library",
-  "tags": ["data-analysis", "python", "data-science", "updated"],
-  "tool_metadata": {"category": "data-analysis", "version": "2.0"}
-}'
+curl -X PUT "http://localhost:8000/api/v1/tools/1" -H "Content-Type: application/json" -d "{\"name\": \"Pandas Library\", \"description\": \"Enhanced Python data analysis library\", \"tags\": [\"data-analysis\", \"python\", \"data-science\", \"updated\"], \"tool_metadata\": {\"category\": \"data-analysis\", \"version\": \"2.0\"}}"
 ```
 **Delete a Tool**
 
@@ -200,9 +186,7 @@ curl -X DELETE "http://localhost:8000/api/v1/tools/1"
 **Semantic Search**
 
 ```bash
-curl -X POST "http://localhost:8000/api/v1/search" \
--H "Content-Type: application/json" \
--d '{"query": "tools for data analysis", "limit": 5}'
+curl -X POST "http://localhost:8000/api/v1/search" -H "Content-Type: application/json" -d "{\"query\": \"tools for data analysis\", \"limit\": 5}"
 ```
 
 **Get Search History**
