@@ -223,3 +223,10 @@ curl "http://localhost:8000/api/v1/health"
 * Queries → embeddings → similarity-ranked results
 
 ---
+
+
+### Demo Video Working
+
+[Demo Video](https://drive.google.com/file/d/1ike6e2TkhUSwNkEVEHOEWdfsq1itl0k5/view?usp=sharing)
+
+* https://drive.google.com/file/d/1ike6e2TkhUSwNkEVEHOEWdfsq1itl0k5/view
